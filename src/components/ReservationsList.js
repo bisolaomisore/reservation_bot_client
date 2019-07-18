@@ -6,7 +6,14 @@ class ReservationsList extends Component {
   }
 
   componentDidMount() {
-    fetch('/reservation')
+    let url = '';
+    if (process.env.NODE_ENV === 'production') {
+      url = process.env.REACT_APP_SERVER_URL;
+    }
+
+    url += '/reservation';
+    console.log(url);
+    fetch(url)
       .then(res => res.json())
       .then(reservations => this.setState({ reservations }));
   }
