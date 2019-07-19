@@ -12,7 +12,6 @@ class ReservationsList extends Component {
     }
 
     url += '/reservation';
-    console.log(url);
     fetch(url)
       .then(res => res.json())
       .then(reservations => this.setState({ reservations }));
