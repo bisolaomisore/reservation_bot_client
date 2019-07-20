@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { fetchReservations } from './reservation-service';
 
 class ReservationsList extends Component {
   state = {
@@ -6,15 +7,9 @@ class ReservationsList extends Component {
   }
 
   componentDidMount() {
-    let url = '';
-    if (process.env.NODE_ENV === 'production') {
-      url = process.env.REACT_APP_SERVER_URL;
-    }
-
-    url += '/reservation';
-    fetch(url)
-      .then(res => res.json())
-      .then(reservations => this.setState({ reservations }));
+    fetchReservations().then(
+      reservations => this.setState({ reservations })
+    );
   }
 
   render() {

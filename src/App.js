@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ReservationsList from './components/ReservationsList';
+import ReservationsList from './components/reservation/ReservationsList';
 
 function App() {
   return (
