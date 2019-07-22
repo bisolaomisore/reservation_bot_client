@@ -1,5 +1,8 @@
 # Reservation Bot (Client Side)
 
+
+**Server Side code can be found [here](https://github.com/SolaOmi/reservation_bot_server).**
+
 An app that allows you to make reservations at your
 favorite restaurant through text message.
 
